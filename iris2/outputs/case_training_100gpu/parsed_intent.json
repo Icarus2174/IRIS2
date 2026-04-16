@@ -1,0 +1,57 @@
+{
+  "accelerator_count": 100,
+  "accelerator_type": "gpu",
+  "case_name": "case_training_100gpu",
+  "energy_preference": "balanced",
+  "explanations": {},
+  "job_type": "training",
+  "latency_sensitivity": "medium",
+  "min_memory_gb": 40,
+  "network_preference": "hybrid",
+  "objectives": [
+    "low collective completion time",
+    "high GPU utilization",
+    "minimize cross-domain communication"
+  ],
+  "placement_preference": "space",
+  "raw_source": {
+    "case": {
+      "name": "case_training_100gpu"
+    },
+    "constraints": {
+      "energy_preference": "balanced",
+      "latency_sensitivity": "medium",
+      "reliability": "medium"
+    },
+    "job": {
+      "accelerators": {
+        "count": 100,
+        "type": "gpu"
+      },
+      "hardware": {
+        "min_memory_gb": 40
+      },
+      "type": "training"
+    },
+    "network": {
+      "preference": "hybrid"
+    },
+    "objectives": [
+      "low collective completion time",
+      "high GPU utilization",
+      "minimize cross-domain communication"
+    ],
+    "placement": {
+      "preference": "space"
+    },
+    "runtime_policy": {
+      "allow_hybrid": true,
+      "conservative": true
+    }
+  },
+  "reliability": "medium",
+  "runtime_policy": {
+    "allow_hybrid": true,
+    "conservative": true
+  }
+}

@@ -1,0 +1,72 @@
+[
+  {
+    "scenario": "inputs/case_inference_earth.yaml",
+    "valid": true,
+    "failed_checks": [],
+    "objective_proxies": {
+      "low_cct_proxy": 0.82,
+      "gpu_utilization_proxy": 1.0,
+      "same_domain_proxy": 1.0,
+      "cross_domain_penalty": 0.0,
+      "weighted_objective_score": 0.949,
+      "weights_used": {
+        "low_cct_proxy": 0.2,
+        "gpu_utilization_proxy": 0.35,
+        "same_domain_proxy": 0.15
+      }
+    }
+  },
+  {
+    "scenario": "inputs/case_runtime_alert.yaml",
+    "valid": true,
+    "failed_checks": [],
+    "objective_proxies": {
+      "low_cct_proxy": 0.91,
+      "gpu_utilization_proxy": 1.0,
+      "same_domain_proxy": 1.0,
+      "cross_domain_penalty": 0.0,
+      "weighted_objective_score": 0.955,
+      "weights_used": {
+        "low_cct_proxy": 0.5,
+        "gpu_utilization_proxy": 0.35,
+        "same_domain_proxy": 0.15
+      }
+    }
+  },
+  {
+    "scenario": "inputs/case_training_100gpu.yaml",
+    "valid": true,
+    "failed_checks": [],
+    "objective_proxies": {
+      "low_cct_proxy": 1.0,
+      "gpu_utilization_proxy": 1.0,
+      "same_domain_proxy": 1.0,
+      "cross_domain_penalty": 0.0,
+      "weighted_objective_score": 1.0,
+      "weights_used": {
+        "low_cct_proxy": 0.5,
+        "gpu_utilization_proxy": 0.35,
+        "same_domain_proxy": 0.15
+      }
+    }
+  },
+  {
+    "scenario": "mutated/case_training_100gpu_no_backbone",
+    "valid": false,
+    "failed_checks": [
+      "high_comm_has_compute_backbone"
+    ],
+    "objective_proxies": {
+      "low_cct_proxy": 0.47,
+      "gpu_utilization_proxy": 1.0,
+      "same_domain_proxy": 1.0,
+      "cross_domain_penalty": 0.0,
+      "weighted_objective_score": 0.735,
+      "weights_used": {
+        "low_cct_proxy": 0.5,
+        "gpu_utilization_proxy": 0.35,
+        "same_domain_proxy": 0.15
+      }
+    }
+  }
+]

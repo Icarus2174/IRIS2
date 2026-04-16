@@ -1,0 +1,8 @@
+{
+  "applied": false,
+  "case_name": "case_training_100gpu",
+  "effects": {},
+  "rationale": {
+    "reason": "no runtime event provided"
+  }
+}

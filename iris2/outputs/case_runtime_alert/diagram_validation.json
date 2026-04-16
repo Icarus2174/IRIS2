@@ -1,0 +1,60 @@
+{
+  "checks": [
+    {
+      "details": {
+        "compute_nodes": [
+          "orbit-leo-solar-1",
+          "orbit-leo-solar-2"
+        ],
+        "requested_accelerators": 100
+      },
+      "name": "diagram_has_required_nodes",
+      "passed": true
+    },
+    {
+      "details": {
+        "compute_node_count": 2,
+        "storage_link_count": 2
+      },
+      "name": "storage_paths_present",
+      "passed": true
+    },
+    {
+      "details": {
+        "backbone_link_count": 1,
+        "backbone_link_types": [
+          "packet"
+        ]
+      },
+      "name": "high_comm_has_compute_backbone",
+      "passed": true
+    },
+    {
+      "details": {
+        "feedback_effects": {
+          "recompiled_topology": true,
+          "rescheduled": true
+        },
+        "feedback_event": "orbital_link_confidence_low",
+        "link_types_after_feedback": [
+          "packet"
+        ]
+      },
+      "name": "runtime_packet_downgrade_visible",
+      "passed": true
+    }
+  ],
+  "objective_proxies": {
+    "cross_domain_penalty": 0.0,
+    "gpu_utilization_proxy": 1.0,
+    "low_cct_proxy": 0.91,
+    "same_domain_proxy": 1.0,
+    "weighted_objective_score": 0.955,
+    "weights_used": {
+      "gpu_utilization_proxy": 0.35,
+      "low_cct_proxy": 0.5,
+      "same_domain_proxy": 0.15
+    }
+  },
+  "passed": true
+}

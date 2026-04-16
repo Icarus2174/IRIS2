@@ -1,0 +1,33 @@
+{
+  "checks": [
+    {
+      "details": {
+        "compute_nodes": [],
+        "requested_accelerators": 0
+      },
+      "name": "diagram_has_required_nodes",
+      "passed": true
+    },
+    {
+      "details": {
+        "compute_node_count": 0,
+        "storage_link_count": 0
+      },
+      "name": "storage_paths_present",
+      "passed": true
+    }
+  ],
+  "objective_proxies": {
+    "cross_domain_penalty": 0.0,
+    "gpu_utilization_proxy": 1.0,
+    "low_cct_proxy": 0.82,
+    "same_domain_proxy": 1.0,
+    "weighted_objective_score": 0.949,
+    "weights_used": {
+      "gpu_utilization_proxy": 0.35,
+      "low_cct_proxy": 0.2,
+      "same_domain_proxy": 0.15
+    }
+  },
+  "passed": true
+}

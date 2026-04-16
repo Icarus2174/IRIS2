@@ -1,0 +1,30 @@
+case:
+  name: case_training_100gpu
+
+job:
+  type: training
+  accelerators:
+    count: 100
+    type: gpu
+  hardware:
+    min_memory_gb: 40
+
+objectives:
+  - low collective completion time
+  - high GPU utilization
+  - minimize cross-domain communication
+
+constraints:
+  latency_sensitivity: medium
+  energy_preference: balanced
+  reliability: medium
+
+placement:
+  preference: space
+
+network:
+  preference: hybrid
+
+runtime_policy:
+  conservative: true
+  allow_hybrid: true

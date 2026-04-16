@@ -1,0 +1,73 @@
+{
+  "baseline": {
+    "baseline": "earth_only_packet_only_no_feedback",
+    "diff_hints": {
+      "placement": {
+        "baseline": "earth",
+        "chosen": "orbit"
+      },
+      "preferred_link_mode": {
+        "baseline": "packet",
+        "chosen": "none"
+      },
+      "runtime_feedback": {
+        "baseline": "disabled",
+        "chosen": "enabled"
+      }
+    },
+    "notes": "naive baseline for evaluation narrative"
+  },
+  "checks": [
+    {
+      "details": {
+        "placement_candidates": [
+          "orbit",
+          "hybrid"
+        ],
+        "reason": "downstream stages consumed populated IR fields",
+        "topology_requirement_keys": [
+          "need_dense_interconnect",
+          "preferred_link_mode",
+          "stability_requirement",
+          "style"
+        ],
+        "workload_class": "archive"
+      },
+      "name": "normalized_ir_used",
+      "passed": true
+    },
+    {
+      "details": {
+        "placement": "orbit"
+      },
+      "name": "allocation_present",
+      "passed": true
+    },
+    {
+      "details": {
+        "num_steps": 0
+      },
+      "name": "schedule_present",
+      "passed": false
+    },
+    {
+      "details": {
+        "num_links": 0
+      },
+      "name": "topology_present",
+      "passed": false
+    },
+    {
+      "details": {
+        "applied": false,
+        "effects": {},
+        "rationale": {
+          "reason": "no runtime event provided"
+        }
+      },
+      "name": "runtime_adaptation_visible",
+      "passed": false
+    }
+  ],
+  "passed": false
+}
